@@ -5,15 +5,27 @@ $(function() {
 	// 	backgroundColor: 'red'
 	// });
 
-	TweenMax.set(".fadeIn", {autoAlpha:0});
-	var tween = TweenMax.staggerTo(".fadeIn", 1, {autoAlpha:1}, 1);	
-
 	TweenMax.set(".fadeIn2", {autoAlpha:0});
 	var tween2 = TweenMax.staggerTo(".fadeIn2", 1, {autoAlpha:1}, 1);	
 
+	TweenMax.set(".fadeIn3", {autoAlpha:0});
+	var tween3 = TweenMax.staggerTo(".fadeIn3", 1, {autoAlpha:1}, 1);	
+
+	TweenMax.set(".fadeIn4", {autoAlpha:0});
+	var tween4 = TweenMax.staggerTo(".fadeIn4", 1, {autoAlpha:1}, 1);	
+
+	TweenMax.set(".fadeIn5", {autoAlpha:0});
+	var tween5 = TweenMax.staggerTo(".fadeIn5", 1, {autoAlpha:1}, 1);	
+
+	TweenMax.set(".fadeIn6", {autoAlpha:0});
+	var tween6 = TweenMax.staggerTo(".fadeIn6", 1, {autoAlpha:1}, 1);	
+
+	// TweenMax.set(".fadeIn3", {autoAlpha:0});
+	// var tween2 = TweenMax.staggerTo(".fadeIn2", 1, {autoAlpha:1}, 1);	
+
 	var containerScene = new ScrollMagic.Scene({
-	    triggerElement: '#container',
-	    duration: 980, // was 1300
+	    triggerElement: '#container1',
+	    duration: 3500, // was 1300
 	    offset: 380 // was 320
 	})
 	// .setTween(tween)
@@ -26,17 +38,43 @@ $(function() {
 	    duration: 360 // was 300
 	    // offset: 320
 	})
-	.setTween(tween)
+	.setTween(tween2)
 	// .setPin("#imagesequence")
 	.addIndicators()
 	.addTo(controller);
 
 	var containerScene = new ScrollMagic.Scene({
 	    triggerElement: '#container3',
-	    duration: 400 // was 300
-	    // offset: 320
+	    duration: 360 
 	})
-	.setTween(tween2)
+	.setTween(tween3)
+	// .setPin("#imagesequence")
+	.addIndicators()
+	.addTo(controller);
+
+	var containerScene = new ScrollMagic.Scene({
+	    triggerElement: '#container4',
+	    duration: 360 
+	})
+	.setTween(tween4)
+	// .setPin("#imagesequence")
+	.addIndicators()
+	.addTo(controller);
+
+	var containerScene = new ScrollMagic.Scene({
+	    triggerElement: '#container5',
+	    duration: 360 
+	})
+	.setTween(tween5)
+	// .setPin("#imagesequence")
+	.addIndicators()
+	.addTo(controller);
+
+	var containerScene = new ScrollMagic.Scene({
+	    triggerElement: '#container6',
+	    duration: 360 
+	})
+	.setTween(tween6)
 	// .setPin("#imagesequence")
 	.addIndicators()
 	.addTo(controller);
