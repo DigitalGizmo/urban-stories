@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+	<title>Urban Renewal - Scroll Story Mockups</title>
+	<link rel="stylesheet" href="styles/css/urban-styles.css" type="text/css"/>
+
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
+
+	<script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.js"></script>
+
+	<style>
+		.full-width {
+			padding: 2em 0 2em 2em;
+			text-align: left;
+		}
+
+		.image-container {
+		    position:relative;
+		    width:100%;
+		    max-width:940px;
+		    display:inline-block;
+		    height:580px;
+		    overflow:hidden;
+		    border:1px solid green;
+		}
+
+		.image-container img {
+		    position: absolute;
+		    top: 0;
+		    left: 0;
+		    width:100%;
+		 
+		}
+
+		.image-container img.active {
+		    z-index:2;
+		}
+
+		.last-paragraph {
+			padding-bottom: 25em;
+		}
+
+	</style>
+
+</head>
+
+<body>
+	<section class="wrapper" id="app">
+
+		<div class="full-width">
+
+			<h2>Displaced People</h2>
+			<h3>The Reaction to Redevelopment</h3>
+
+			<p>The State announces decision to seize 98.5 acres in downtown Albany for construction of new state office complex. City of Albany wakes up to learn the news—some that their homes now belong to the State and they will soon have to move</p>
+
+			<img src="images/albany-aerial-photo.jpg">
+
+			<p>We might use the frontpage of the Times Union and/or Knick News, editorial cartoons as illustrations.</p>
+
+		</div>
+
+		<!-- <div class="image-panel" v-html="currImage"></div> -->
+		<div class="image-panel">   <!-- id="myPicture" -->
+
+			<div id="imagesequence" class="image-container">
+
+	            <img id="image" src="images/south-mall-at-night.jpg"/>
+
+	            <img class="fadeIn" src="images/south-mall-fountains.jpg" />
+
+	            <img class="fadeIn2" src="images/albany-construction.jpg" />
+				
+			</div>
+
+		</div>
+
+		<div class="text-panel">  
+
+			<div  id="container">
+				<h2>Man-on-the-street interviews</h2>
+
+				<p>&nbsp;</p>
+				<p>&nbsp;</p>
+				
+				<p class="last-paragraph">John Johnson: “These houses are old. I think it would be swell to tear these buildings down.”</p>
+
+
+			</div>	
+
+			<div  id="container2">
+				<p class="last-paragraph">James Strawn agreed that “tearing down ‘these 50 and 60-year-old buildings might make for some decent places in which to live.’”</p>
+
+
+			</div>
+					
+			<div  id="container3">
+				<p>George Kemp: “This would be a pretty good deal if they included some housing projects too.”</p>
+				<p>&nbsp;</p>
+				<p>[ maybe all of the man-on-the-street interviews here?]</p>
+				<p>&nbsp;</p>
+				<p class="last-paragraph">&nbsp;</p>
+
+			</div>
+
+			<div >
+				<h2>On to the next thing</h2>
+
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+				<p class="last-paragraph">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+
+				<p v-html="message"></p>
+
+
+			</div>
+
+		</div>
+
+	</section>
+
+	<script src="js/urban-magic.js" type="text/javascript"></script>
+
+</body>
+
+</html>

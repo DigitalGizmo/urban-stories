@@ -1,0 +1,24 @@
+// page layout
+body {
+	margin: 0;
+}
+
+.wrapper {
+	display: grid;
+	grid-template-columns: 66% 34%;
+}
+
+.image-panel {
+	grid-column: 1;
+}
+
+.text-panel {
+	background-color: $dark-gray;
+	grid-column: 2;
+	padding: 8%;
+}
+
+.full-page {
+	grid-column: 1/2;
+	padding: 8%;
+}
