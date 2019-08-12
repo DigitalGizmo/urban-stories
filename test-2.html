@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.grid-container {
+  display: grid;
+  grid-gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
+}
+
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  font-size: 30px;
+}
+
+.intro {
+  grid-column: 1 / span 3;
+  grid-row: 1;
+}
+
+.chapter {
+	display: grid;
+  grid-column: 1 / span 3;
+}
+
+.image {
+  grid-column: 1 / span 2;
+  background-color: yellow;
+}
+
+.text {
+	grid-column: 3;
+    background-color: green;
+}
+
+</style>
+</head>
+<body>
+
+<h1>A Grid Layout:</h1>
+
+<div class="grid-container">
+  <div class="intro">intro</div>
+  
+  <div class="chapter">
+  	<div class="image">image 1</div>
+  	<div class="text">text 1</div>
+  </div>
+  
+  <div class="chapter">
+  	<div class="image">image 2</div>
+  	<div class="text">text 2</div>
+  </div>
+</div>
+
+<p>Direct child elements(s) of the grid container automatically becomes grid items.</p>
+
+<p>Images and text are set to span multiple columns or rows.</p>
+
+</body>
+</html>
+

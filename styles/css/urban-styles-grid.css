@@ -1,0 +1,194 @@
+button {
+  appearance: none;
+  background-color: #e8e0d0;
+  border: 0;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Verdana", "Geneva", sans-serif;
+  font-size: 1em;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 600;
+  line-height: 1;
+  padding: 0.8em 1.6em;
+  text-decoration: none;
+  transition: background-color 150ms ease;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+button:hover, button:focus {
+  background-color: shade(#e8e0d0, 20%);
+  color: #fff;
+}
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+button:disabled:hover {
+  background-color: #e8e0d0;
+}
+
+a:link {
+  color: #e8e0d0;
+}
+
+a:visited {
+  color: shade(#e8e0d0, 20%);
+}
+
+a:hover {
+  color: #bea87a;
+  text-decoration: underline;
+}
+
+ul,
+ol {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+dl {
+  margin-bottom: 0.8em;
+}
+dl dt {
+  font-weight: 600;
+  margin-top: 0.8em;
+}
+dl dd {
+  margin: 0;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 0.8em 0;
+  table-layout: fixed;
+  width: 100%;
+}
+
+th {
+  border-bottom: 1px solid shade(#e8e0d0, 25%);
+  font-weight: 600;
+  padding: 0.8em 0;
+  text-align: left;
+}
+
+td {
+  border-bottom: 1px solid #e8e0d0;
+  padding: 0.8em 0;
+}
+
+tr,
+td,
+th {
+  vertical-align: middle;
+}
+
+html {
+  background-color: #444;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  color: white;
+  font-family: "Verdana", "Geneva", sans-serif;
+  font-size: 1em;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Verdana", "Geneva", sans-serif;
+  line-height: 1.2;
+  margin: 0;
+}
+
+a {
+  color: #e8e0d0;
+  text-decoration: none;
+  transition: color 150ms ease;
+}
+a:active, a:focus, a:hover {
+  color: shade(#e8e0d0, 25%);
+}
+
+hr {
+  border-bottom: 1px solid #e8e0d0;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  margin: 1.6em 0;
+}
+
+img {
+  margin: 0;
+  max-width: 100%;
+}
+
+blockquote {
+  font-style: italic;
+}
+
+h1 {
+  font-size: 2.25em;
+}
+
+h3 {
+  margin-bottom: 0;
+  margin-top: 0.2em;
+}
+
+p {
+  text-align: left;
+  margin: 0 0 0.8em;
+}
+p a {
+  color: #e8e0d0;
+  font-weight: bold;
+}
+
+body {
+  margin: 0;
+}
+
+.wrapper {
+  display: grid;
+  padding: 2em;
+  /*grid-template-columns: 66% 34%;*/
+}
+
+.image-panel {
+  background-color: green;
+  grid-column: 1 / span 2;
+  padding: 2em;
+}
+
+.text-panel {
+  /*background-color: #444;*/
+  background-color: blue;
+  grid-column: 3;
+  padding: 2em;
+}
+
+/*.text-scroll {
+  height: 60vh;
+  overflow: scroll;
+}*/
+
+.full-width {
+  display: grid;
+  grid-column: 1 / span 3;
+/*  grid-column: 1 / span 2;
+  padding: 8%;*/
+}
+
+/*# sourceMappingURL=urban-styles.css.map */

@@ -5,6 +5,9 @@ $(function() {
 	// 	backgroundColor: 'red'
 	// });
 
+	TweenMax.set(".fadeIn1", {autoAlpha:0});
+	var tween1 = TweenMax.staggerTo(".fadeIn1", 1, {autoAlpha:1}, 1);	
+
 	TweenMax.set(".fadeIn2", {autoAlpha:0});
 	var tween2 = TweenMax.staggerTo(".fadeIn2", 1, {autoAlpha:1}, 1);	
 
@@ -24,12 +27,22 @@ $(function() {
 	// var tween2 = TweenMax.staggerTo(".fadeIn2", 1, {autoAlpha:1}, 1);	
 
 	var containerScene = new ScrollMagic.Scene({
-	    triggerElement: '#container1',
+	    triggerElement: '#container0',
 	    duration: 3500, // was 1300
 	    offset: 380 // was 320
 	})
 	// .setTween(tween)
 	.setPin("#imagesequence")
+	.addIndicators()
+	.addTo(controller);
+
+	var containerScene = new ScrollMagic.Scene({
+	    triggerElement: '#container1',
+	    duration: 360 // was 300
+	    // offset: 320
+	})
+	.setTween(tween1)
+	// .setPin("#imagesequence")
 	.addIndicators()
 	.addTo(controller);
 
