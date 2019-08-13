@@ -4,13 +4,14 @@
 *.jpg
 *.png
 *.gif
-*.geojson
+*.m4a
 
 # files
 .DS_Store
 robots.txt
-images/
 # directories
+images/
+media/
 **/.sass-cache
 **/.sass-cache/*
 
