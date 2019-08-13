@@ -96,7 +96,7 @@ html {
 
 body {
   color: white;
-  font-family: "Verdana", "Geneva", sans-serif;
+  font-family: "Helvetica", "Geneva", sans-serif;
   font-size: 1em;
   line-height: 1.6;
 }
@@ -107,7 +107,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Verdana", "Geneva", sans-serif;
+  font-family: "Helvetica", "Geneva", sans-serif;
   line-height: 1.2;
   margin: 0;
 }
@@ -184,6 +184,11 @@ body {
 .full-page {
   grid-column: 1/2;
   padding: 8%;
+}
+
+p.caption {
+	color: gray;
+	font-size: .8em;
 }
 
 /*# sourceMappingURL=urban-styles.css.map */
