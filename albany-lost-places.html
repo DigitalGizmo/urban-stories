@@ -35,11 +35,20 @@
 		    /*border:1px solid green;*/
 		}
 
-		.image-container img {
+		.image-container div {
 		    position: absolute;
 		    top: 0;
 		    left: 0;
 		    width:100%;
+		 
+		}
+
+		.image-container div img {
+		    /*position: absolute;*/
+		    top: 0;
+		    left: 0;
+		    /*width:100%;*/
+		    height: 75vh;
 		 
 		}
 
@@ -71,240 +80,271 @@
 
 		</div>
 		
-		<!-- <section> -->
+		<div class="image-panel">   <!-- id="myPicture" -->
 
-			<div class="image-panel">   <!-- id="myPicture" -->
-
-				<div id="imagesequence" class="image-container">
-
-		            <img id="image" src="images/chapter1.jpg"/>
-		            <img class="fadeIn1" src="images/chapter1-1.jpg" />
-		            <img class="fadeIn2" src="images/chapter1-2.jpg" />
-		            <img class="fadeIn3"  src="images/chapter1-3.jpg"/>
-		            <img class="fadeIn4" src="images/chapter1-4.jpg" />
-		            <img class="fadeIn5" src="images/chapter1-5.jpg" />
-		            <img class="fadeIn6" src="images/chapter1-6.jpg" />
-					
-		            <img class="fadeIn7" src="images/chapter-end.jpg" />
-		            <img class="fadeIn20" src="images/chapter2.jpg" />
-		            <img class="fadeIn21" src="images/chapter2-1.jpg" />
-		            <img class="fadeIn22" src="images/chapter2-2.jpg" />
-		            <img class="fadeIn23" src="images/chapter2-3.jpg" />
-		            <img class="fadeIn24" src="images/chapter2-4.jpg" />
-		            <img class="fadeIn25" src="images/chapter2-5.jpg" />
-		            <img class="fadeIn26" src="images/chapter2-6.jpg" />
-		            <img class="fadeIn27" src="images/chapter-end.jpg" />
-
-		            <img class="fadeIn40" src="images/map-commercial.jpg" />
-		            <img class="fadeIn41" src="images/map-rooming-houses.jpg" />
-		            <img class="fadeIn42" src="images/map-residential.jpg" />
-		            <img class="fadeIn43" src="images/map-offices.jpg" />
-		            <img class="fadeIn44" src="images/map-markets.jpg" />
-		            <img class="fadeIn45" src="images/map-gut.jpg" />
+			<div id="imagesequence" class="image-container">
+				<div class="fadeIn0" >
+		            <img src="images/chapter1.jpg"/>	<!-- id="image"  -->
+		            <p>Caption for --</p>
 				</div>
+				<div class="fadeIn1" >
+		            <img src="images/chapter1-1.jpg" />
+		            <p>Caption for 1</p>
+				</div>
+				<div class="fadeIn2" >
+		            <img src="images/chapter1-2.jpg" />
+		            <p>Caption for 2</p>
+				</div>
+				<div class="fadeIn3" >
+		            <img src="images/chapter1-3.jpg"/>
+		            <p>Caption for 3</p>
+				</div>
+				<div class="fadeIn4" >
+		            <img src="images/chapter1-4.jpg" />
+		            <p>Caption for 4</p>
+				</div>
+				<div class="fadeIn5" >
+		            <img src="images/chapter1-5.jpg" />
+		            <p>Caption for 5</p>
+				</div>
+				<div class="fadeIn6" >
+		            <img src="images/chapter1-6.jpg" />
+		            <p>Caption for 6</p>
+				</div>
+				<div class="fadeIn7" >
+		            <img src="images/chapter-end.jpg" />
+				</div>
+				<div class="fadeIn20" >
+		            <img src="images/chapter2.jpg" />
+				</div>
+				<div class="fadeIn21" >
+		            <img src="images/chapter2-1.jpg" />
+				</div>
+				<div class="fadeIn22" >
+		            <img src="images/chapter2-2.jpg" />
+				</div>
+				<div class="fadeIn23" >
+		            <img src="images/chapter2-3.jpg" />
+				</div>
+				<div class="fadeIn24" >
+		            <img src="images/chapter2-4.jpg" />
+				</div>
+				<div class="fadeIn25" >
+		            <img src="images/chapter2-5.jpg" />
+				</div>
+				<div class="fadeIn26" >
+		            <img src="images/chapter2-6.jpg" />
+				</div>
+	            <img class="fadeIn27" src="images/chapter-end.jpg" />
+	            <img class="fadeIn40" src="images/map-commercial.jpg" />
+	            <img class="fadeIn41" src="images/map-rooming-houses.jpg" />
+	            <img class="fadeIn42" src="images/map-residential.jpg" />
+	            <img class="fadeIn43" src="images/map-offices.jpg" />
+	            <img class="fadeIn44" src="images/map-markets.jpg" />
+	            <img class="fadeIn45" src="images/map-gut.jpg" />
+			</div>
+
+		</div>
+
+		<div class="text-panel">  
+
+			<div  id="container0">
+				<h2>Mixed Reactions</h2>
+				<p>&nbsp;</p>
+
+				<p class="last-paragraph">The reaction of residents in the &ldquo;take area&rdquo; were mixed. Some welcomed the promised utopian vision, hoping it would improve their living situation. Others were more skeptical, expressing concern about both their residential prospects as well as the effects on their business. Scroll down to read — and hear, a sampling of reactions. </p>
+
+			</div>	
+
+			<div  id="container1">
+				<h3>John Johnson, James Strawn, and George Kemp</h3>
+				<p>&nbsp;</p>
+
+				<p>John Johnson: &ldquo;These houses are old. I think it would be swell to tear these buildings down.&rdquo;</p>
+
+				<p>
+			      <audio controls>
+			        <source src="media/johnson.m4a" type="audio/mpeg" />
+			        <!-- fallback -->
+			           Your browser does not support the HTML5 audio element -- set up mainly for chrome and safari.
+			      </audio>
+				</p>
+
+				<p>James Strawn agreed that &ldquo;tearing down these 50 and 60-year-old buildings might make for some decent places in which to live.&rdquo;</p>
+
+				<p>
+			      <audio controls>
+			        <source src="media/strawn.m4a" type="audio/mpeg" />
+			        <!-- fallback -->
+			           Your browser does not support the HTML5 audio element -- set up mainly for chrome and safari.
+			      </audio>
+				</p>
+
+				<p>George Kemp: &ldquo;This would be a pretty good deal if they included some housing projects too.&rdquo;</p>
+
+				<p class="last-paragraph">
+			      <audio controls>
+			        <source src="media/kemp.m4a" type="audio/mpeg" />
+			        <!-- fallback -->
+			           Your browser does not support the HTML5 audio element -- set up mainly for chrome and safari.
+			      </audio>
+				</p>
+			</div>	
+
+			<div  id="container2">
+				<h3>Lillian Pierce</h3>
+				<p>&nbsp;</p>
+
+				<p>"How is it going to help downtown? Naturally, we don&apos;t want to move. Even the news may scare my people away. And they&apos;ve been coming her for years.</p>
+
+				<p>"Everyone&apos;s talking about this. Even the grocer up the street on Hawk Street. He wants to move out now instead of waiting."</p>
+
+				<p class="last-paragraph">
+			      <audio controls>
+			        <source src="media/kemp.m4a" type="audio/mpeg" />
+			        <!-- fallback -->
+			           Your browser does not support the HTML5 audio element -- set up mainly for chrome and safari.
+			      </audio>
+			</div>
+					
+			<div  id="container3">
+				<h3>John Sgarlata</h3>
+				<p>&nbsp;</p>
+
+				<p class="last-paragraph">"Thirty years ago this market was open day and night. The Menands Market opened. That killed this. Then Park &amp; Shop opened. That and the automobile killed the rest of the farmer trade. I&apos;m an old guy. I&apos;ll be 67 in August. I&apos;m retired practically already and my son, Frank, will be in charge."</p>
 
 			</div>
 
-			<div class="text-panel">  
+			<div  id="container4">
+				<h3>Elinor Mullen</h3>
+				<p>&nbsp;</p>
 
-				<div  id="container0">
-					<h2>Mixed Reactions</h2>
-					<p>&nbsp;</p>
+				<p class="last-paragraph">After opening the Cathedral Shop over 5 years ago and building up the business, now they are moving the whole congregation including my business and my home, the place I spent hundreds of dollars to make it comfortable, intending to spend the rest of my life here with my family including my invalid father who is over 80 and has lived in this neighborhood all his life. Where am I going? I think it is unfair and an outrage.</p>
 
-					<p class="last-paragraph">The reaction of residents in the &ldquo;take area&rdquo; were mixed. Some welcomed the promised utopian vision, hoping it would improve their living situation. Others were more skeptical, expressing concern about both their residential prospects as well as the effects on their business. Scroll down to read — and hear, a sampling of reactions. </p>
+			</div>
 
-				</div>	
+			<div  id="container5">
+				<h3>Leonora Blodgett</h3>
+				<p>&nbsp;</p>
 
-				<div  id="container1">
-					<h3>John Johnson, James Strawn, and George Kemp</h3>
-					<p>&nbsp;</p>
+				<p>I don&apos;t like it at all. It came so fast I don&apos;t know what to do. This rooming house is my sole means of support. It will be a terrible hardship. I can&apos;t go out and get a job at my age.</p>
+				<p class="last-paragraph">. . . . It is going to be a great hardship on me at my age to sell this place because no matter what they give me when I settle the mortgage no this place I won&apos;t have much left. . . .</p>
+			</div>
 
-					<p>John Johnson: &ldquo;These houses are old. I think it would be swell to tear these buildings down.&rdquo;</p>
+			<div  id="container6">
+				<h3>Viola Williams</h3>
+				<p>&nbsp;</p>
 
-					<p>
-				      <audio controls>
-				        <source src="media/johnson.m4a" type="audio/mpeg" />
-				        <!-- fallback -->
-				           Your browser does not support the HTML5 audio element -- set up mainly for chrome and safari.
-				      </audio>
-					</p>
+				<p class="last-paragraph">I have been worried since I heard that the State is going to dispossess us. I don&apos;t know what to do because trying to find a home for colored people is almost impossible. I would like to remain here.</p>
+			</div>
 
-					<p>James Strawn agreed that &ldquo;tearing down these 50 and 60-year-old buildings might make for some decent places in which to live.&rdquo;</p>
+			<div id="container7">
+				<p>&nbsp;</p>
+				<p>&nbsp;</p>
+				<p class="last-paragraph">&nbsp;</p>
+			</div>
 
-					<p>
-				      <audio controls>
-				        <source src="media/strawn.m4a" type="audio/mpeg" />
-				        <!-- fallback -->
-				           Your browser does not support the HTML5 audio element -- set up mainly for chrome and safari.
-				      </audio>
-					</p>
+			<div id="container20">
+				<h2>The Plan</h2>
+				<p class="last-paragraph">On March 30, 1962, the Times Union editorial board urged readers, who harbored &ldquo;doubts&rdquo; about the wisdom of the State of New York&apos;s plan to seize and redevelop the South Mall area, to &ldquo;drive slowly—or walk—up and down these once proud streets. Then decide for yourself.&rdquo; The implication, of course, was that anyone who viewed the area firsthand would favor the State&apos;s plan. Beginning on the day the State announced its plan and continuing for the next several months, both the Times Union and Knickerbocker News published stories, editorials, and, perhaps most importantly, photographs designed to build the case for redevelopment.</p>
+			</div>
 
-					<p>George Kemp: &ldquo;This would be a pretty good deal if they included some housing projects too.&rdquo;</p>
+			<div id="container21">
+				<h3>Rocky v Corning</h3>
+				<p class="last-paragraph"> Conflict between the City and the State, embodied by Gov. Nelson Rockefeller and Mayor Erastus Corning. </p>
+			</div>
 
-					<p class="last-paragraph">
-				      <audio controls>
-				        <source src="media/kemp.m4a" type="audio/mpeg" />
-				        <!-- fallback -->
-				           Your browser does not support the HTML5 audio element -- set up mainly for chrome and safari.
-				      </audio>
-					</p>
-				</div>	
+			<div id="container22">
+				<h3> Competing plans</h3>
+				<p class="last-paragraph">We can select images from both plans. The City plan proposed a different location for the State office complex.</p>
+			</div>
 
-				<div  id="container2">
-					<h3>Lillian Pierce</h3>
-					<p>&nbsp;</p>
+			<div id="container23">
+				<h3>Citizens United Reform Effort (CURE) response</h3>
+				<p class="last-paragraph">CURE was a good-government reform movement. Members opposed the Corning-O&apos;Connell Democratic Machine, and most (but not all—see Hal Juhre&apos;s letter to the editor) were also vocal supporters of State&apos;s redevelopment plan.</p>
+			</div>
 
-					<p>"How is it going to help downtown? Naturally, we don&apos;t want to move. Even the news may scare my people away. And they&apos;ve been coming her for years.</p>
+			<div id="container24">
+				<h3>The NAACP's response</h3>
+				<p>"Had the mayor used half as much energy in fixing up the city and building the much needed housing as he is fighting the state, the mall situation might not have happened….</p>
+				<p>"Anyone living in Albany, especially in the urban renewal areas, would tell you a really free election hasn&apos;t been held in these areas in the last 18 years.</p>
+				<p>"Between threats of loss of welfare, raising of property taxes and loss of jobs by local politicians; a surplus of parking tickets and brutality from police; the bothersome and unnecessary visits of the infamous Night Squad, 90 per cent of these voters will, as always, vote the way the city officials want….</p>
+				<p class="last-paragraph">"This area contains one of the most populated Negro areas of the city. When this area goes, another 1,000 Negroes and Puerto Ricans who live in it will have to move into the already overcrowded areas left in the South End and up on Arbor Hill. And you know, they just might elect a member to the City Council and it won&apos;t be a Democrat."</p>
+			</div>
 
-					<p>"Everyone&apos;s talking about this. Even the grocer up the street on Hawk Street. He wants to move out now instead of waiting."</p>
+			<div id="container25">
+				<h3>South Mall: Hoax or Hope</h3>
+				<p class="last-paragraph">(selections from the tv documentary) about the conflict between City and State.</p>
+			</div>
 
-					<p class="last-paragraph">
-				      <audio controls>
-				        <source src="media/kemp.m4a" type="audio/mpeg" />
-				        <!-- fallback -->
-				           Your browser does not support the HTML5 audio element -- set up mainly for chrome and safari.
-				      </audio>
-				</div>
-						
-				<div  id="container3">
-					<h3>John Sgarlata</h3>
-					<p>&nbsp;</p>
+			<div id="container26">
+				<h3>First and Second demolitions</h3>
+				<p class="last-paragraph">Describe the Rockefeller press event, tell the story of the Abarca family and their tenants, and explain why spot demolition is a problem</p>
+			</div>
 
-					<p class="last-paragraph">"Thirty years ago this market was open day and night. The Menands Market opened. That killed this. Then Park &amp; Shop opened. That and the automobile killed the rest of the farmer trade. I&apos;m an old guy. I&apos;ll be 67 in August. I&apos;m retired practically already and my son, Frank, will be in charge."</p>
+			<div id="container27">
+				<p>&nbsp;</p>
+				<p>&nbsp;</p>
+				<p class="last-paragraph">&nbsp;</p>
+			</div>
 
-				</div>
+			<div id="container40">
+				<h2>Map of Displacements</h2>
+				<p>&nbsp;</p>
+				<h3>The Business District</h3>
+				<p>Hudson Ave was a mixed commercial/residential area. The businesses were geared toward serving the neighborhood&apos;s residents—restaurants, taverns, groceries, tailors, laundries, and shoe repair stores. One landmark business was the Eagle Theater where locals could see two full features, a newsreel, several cartoons, a weekly serial (wherein the hero prevails but new perils present themselves every week). The Eagle also hosted free bingo on weekends. Barry Levine remembers living, and working, in this neighborhood.</p>
 
-				<div  id="container4">
-					<h3>Elinor Mullen</h3>
-					<p>&nbsp;</p>
+				<h3>Barry Levine - Dinty&apos;s Tavern on Hudson Street</h3>
+				<p class="last-paragraph">
+			      <audio controls>
+			        <source src="media/levine.m4a" type="audio/mpeg" />
+			        <!-- fallback -->
+			           Your browser does not support the HTML5 audio element -- set up mainly for chrome and safari.
+			      </audio>
+				</p>
+			</div>
 
-					<p class="last-paragraph">After opening the Cathedral Shop over 5 years ago and building up the business, now they are moving the whole congregation including my business and my home, the place I spent hundreds of dollars to make it comfortable, intending to spend the rest of my life here with my family including my invalid father who is over 80 and has lived in this neighborhood all his life. Where am I going? I think it is unfair and an outrage.</p>
+			<div id="container41">
+				<h3>Rooming House District</h3>
+				<p>A mix of unmarried, or married but out-of-town state workers/legislators, along with a large population of older, single men and women. Most rooming house owners were single women, usually widowed or divorced. Landmarks: St. Sophia Greek Orthodox Church and St. Paul&apos;s Episcopal Church.</p>
 
-				</div>
+				<h3>Mae Carlson - Jay Street</h3>
+				<p class="last-paragraph">
+			      <audio controls>
+			        <source src="media/carlson.m4a" type="audio/mpeg" />
+			        <!-- fallback -->
+			           Your browser does not support the HTML5 audio element -- set up mainly for chrome and safari.
+			      </audio>
+				</p>
+			</div>
 
-				<div  id="container5">
-					<h3>Leonora Blodgett</h3>
-					<p>&nbsp;</p>
+			<div id="container42">
+				<h3>Residential District</h3>
+				<p>There were very few single-family homes; most families rented out 1-2 rooms or apartments; scattered amongst the residences were small businesses, mainly corner stores, drug stores, and laundries. Cathedral area between Madison and Park, S. Swan and Eagle were heavily white areas populated by Catholics but with a growing population of Southern black migrants, tenants and homeowners, esp. on and around Jefferson St. Landmarks: Catholic grade school and high school. This area is adjacent to Lincoln Park.</p>
+				<h3>The Leonard Family - Park Avenue</h3>
+				<p class="last-paragraph">James (Jim) and Emma Leonard knew that they would have to move before the end of 1964. Yet they had hoped to spend one last Christmas in their 93 Park Avenue home. But on December 22—three days before Christmas—a McArdle & Casazza moving van arrived at their door, courtesy of the State of New York. So, while Jim was at work, Emma supervised the movers and packed up the car with kids and Christmas decorations. That day, the Leonard family became the last to leave the South Mall take area. They would celebrate the holidays in a new house on Hillcrest Avenue—with a puppy named Prince to go with the family&apos;s big new backyard.</p>
+			</div>
 
-					<p>I don&apos;t like it at all. It came so fast I don&apos;t know what to do. This rooming house is my sole means of support. It will be a terrible hardship. I can&apos;t go out and get a job at my age.</p>
-					<p class="last-paragraph">. . . . It is going to be a great hardship on me at my age to sell this place because no matter what they give me when I settle the mortgage no this place I won&apos;t have much left. . . .</p>
-				</div>
+			<div id="container43">
+				<h3>The Office District</h3>
+				<p>State St., across from the Capitol, was the site of lawyers&apos; and lobbyists&apos; offices. It also included some elegant homes and other small businesses, including the fabled Ambassador Tavern.</p>
+				<h3>Marv and Ruthie Sherman - Elk Street</h3>
+				<p class="last-paragraph">On March 31, 1962—4 days after the State of New York seized Albany&apos;s 98 acres— the Knickerbocker News &ldquo;Night Owl&rdquo; column reported that Ambassador owner Marvin J. Sherman and his regular customers were &ldquo;thinking of forming a Citizens Society to Exempt the Ambassador&rdquo; from demolition. The author quipped that a protest march emerging from the bar at 180 State Street, just across from the Capitol, would &ldquo;have the best starting point in history.&rdquo; In fact, such a protest would probably have received a sympathetic hearing from legislators of both parties. Along with lobbyists, newsmen, call girls, and a bookie known as &ldquo;Gaga,&rdquo; legislators were among the bar&apos;s most loyal customers.</p>
+			</div>
 
-				<div  id="container6">
-					<h3>Viola Williams</h3>
-					<p>&nbsp;</p>
+			<div id="container44">
+				<h3>The Market District</h3>
+				<p class="last-paragraph">Grand and Philip/Hudson and Hamilton area was a mixed/commercial residential area. At its center was the farmer&apos;s market and retail/wholesale produce vendors. Landmarks: Lyon Block, First Methodist Church/Methodist Inner City Mission and French Catholic</p>
+			</div>
 
-					<p class="last-paragraph">I have been worried since I heard that the State is going to dispossess us. I don&apos;t know what to do because trying to find a home for colored people is almost impossible. I would like to remain here.</p>
-				</div>
-
-				<div id="container7">
-					<p>&nbsp;</p>
-					<p>&nbsp;</p>
-					<p class="last-paragraph">&nbsp;</p>
-				</div>
-
-				<div id="container20">
-					<h2>The Plan</h2>
-					<p class="last-paragraph">On March 30, 1962, the Times Union editorial board urged readers, who harbored &ldquo;doubts&rdquo; about the wisdom of the State of New York&apos;s plan to seize and redevelop the South Mall area, to &ldquo;drive slowly—or walk—up and down these once proud streets. Then decide for yourself.&rdquo; The implication, of course, was that anyone who viewed the area firsthand would favor the State&apos;s plan. Beginning on the day the State announced its plan and continuing for the next several months, both the Times Union and Knickerbocker News published stories, editorials, and, perhaps most importantly, photographs designed to build the case for redevelopment.</p>
-				</div>
-
-				<div id="container21">
-					<h3>Rocky v Corning</h3>
-					<p class="last-paragraph"> Conflict between the City and the State, embodied by Gov. Nelson Rockefeller and Mayor Erastus Corning. </p>
-				</div>
-
-				<div id="container22">
-					<h3> Competing plans</h3>
-					<p class="last-paragraph">We can select images from both plans. The City plan proposed a different location for the State office complex.</p>
-				</div>
-
-				<div id="container23">
-					<h3>Citizens United Reform Effort (CURE) response</h3>
-					<p class="last-paragraph">CURE was a good-government reform movement. Members opposed the Corning-O&apos;Connell Democratic Machine, and most (but not all—see Hal Juhre&apos;s letter to the editor) were also vocal supporters of State&apos;s redevelopment plan.</p>
-				</div>
-
-				<div id="container24">
-					<h3>The NAACP's response</h3>
-					<p>"Had the mayor used half as much energy in fixing up the city and building the much needed housing as he is fighting the state, the mall situation might not have happened….</p>
-					<p>"Anyone living in Albany, especially in the urban renewal areas, would tell you a really free election hasn&apos;t been held in these areas in the last 18 years.</p>
-					<p>"Between threats of loss of welfare, raising of property taxes and loss of jobs by local politicians; a surplus of parking tickets and brutality from police; the bothersome and unnecessary visits of the infamous Night Squad, 90 per cent of these voters will, as always, vote the way the city officials want….</p>
-					<p class="last-paragraph">"This area contains one of the most populated Negro areas of the city. When this area goes, another 1,000 Negroes and Puerto Ricans who live in it will have to move into the already overcrowded areas left in the South End and up on Arbor Hill. And you know, they just might elect a member to the City Council and it won&apos;t be a Democrat."</p>
-				</div>
-
-				<div id="container25">
-					<h3>South Mall: Hoax or Hope</h3>
-					<p class="last-paragraph">(selections from the tv documentary) about the conflict between City and State.</p>
-				</div>
-
-				<div id="container26">
-					<h3>First and Second demolitions</h3>
-					<p class="last-paragraph">Describe the Rockefeller press event, tell the story of the Abarca family and their tenants, and explain why spot demolition is a problem</p>
-				</div>
-
-				<div id="container27">
-					<p>&nbsp;</p>
-					<p>&nbsp;</p>
-					<p class="last-paragraph">&nbsp;</p>
-				</div>
-
-				<div id="container40">
-					<h2>Map of Displacements</h2>
-					<p>&nbsp;</p>
-					<h3>The Business District</h3>
-					<p>Hudson Ave was a mixed commercial/residential area. The businesses were geared toward serving the neighborhood&apos;s residents—restaurants, taverns, groceries, tailors, laundries, and shoe repair stores. One landmark business was the Eagle Theater where locals could see two full features, a newsreel, several cartoons, a weekly serial (wherein the hero prevails but new perils present themselves every week). The Eagle also hosted free bingo on weekends. Barry Levine remembers living, and working, in this neighborhood.</p>
-
-					<h3>Barry Levine - Dinty&apos;s Tavern on Hudson Street</h3>
-					<p class="last-paragraph">
-				      <audio controls>
-				        <source src="media/levine.m4a" type="audio/mpeg" />
-				        <!-- fallback -->
-				           Your browser does not support the HTML5 audio element -- set up mainly for chrome and safari.
-				      </audio>
-					</p>
-				</div>
-
-				<div id="container41">
-					<h3>Rooming House District</h3>
-					<p>A mix of unmarried, or married but out-of-town state workers/legislators, along with a large population of older, single men and women. Most rooming house owners were single women, usually widowed or divorced. Landmarks: St. Sophia Greek Orthodox Church and St. Paul&apos;s Episcopal Church.</p>
-
-					<h3>Mae Carlson - Jay Street</h3>
-					<p class="last-paragraph">
-				      <audio controls>
-				        <source src="media/carlson.m4a" type="audio/mpeg" />
-				        <!-- fallback -->
-				           Your browser does not support the HTML5 audio element -- set up mainly for chrome and safari.
-				      </audio>
-					</p>
-				</div>
-
-				<div id="container42">
-					<h3>Residential District</h3>
-					<p>There were very few single-family homes; most families rented out 1-2 rooms or apartments; scattered amongst the residences were small businesses, mainly corner stores, drug stores, and laundries. Cathedral area between Madison and Park, S. Swan and Eagle were heavily white areas populated by Catholics but with a growing population of Southern black migrants, tenants and homeowners, esp. on and around Jefferson St. Landmarks: Catholic grade school and high school. This area is adjacent to Lincoln Park.</p>
-					<h3>The Leonard Family - Park Avenue</h3>
-					<p class="last-paragraph">James (Jim) and Emma Leonard knew that they would have to move before the end of 1964. Yet they had hoped to spend one last Christmas in their 93 Park Avenue home. But on December 22—three days before Christmas—a McArdle & Casazza moving van arrived at their door, courtesy of the State of New York. So, while Jim was at work, Emma supervised the movers and packed up the car with kids and Christmas decorations. That day, the Leonard family became the last to leave the South Mall take area. They would celebrate the holidays in a new house on Hillcrest Avenue—with a puppy named Prince to go with the family&apos;s big new backyard.</p>
-				</div>
-
-				<div id="container43">
-					<h3>The Office District</h3>
-					<p>State St., across from the Capitol, was the site of lawyers&apos; and lobbyists&apos; offices. It also included some elegant homes and other small businesses, including the fabled Ambassador Tavern.</p>
-					<h3>Marv and Ruthie Sherman - Elk Street</h3>
-					<p class="last-paragraph">On March 31, 1962—4 days after the State of New York seized Albany&apos;s 98 acres— the Knickerbocker News &ldquo;Night Owl&rdquo; column reported that Ambassador owner Marvin J. Sherman and his regular customers were &ldquo;thinking of forming a Citizens Society to Exempt the Ambassador&rdquo; from demolition. The author quipped that a protest march emerging from the bar at 180 State Street, just across from the Capitol, would &ldquo;have the best starting point in history.&rdquo; In fact, such a protest would probably have received a sympathetic hearing from legislators of both parties. Along with lobbyists, newsmen, call girls, and a bookie known as &ldquo;Gaga,&rdquo; legislators were among the bar&apos;s most loyal customers.</p>
-				</div>
-
-				<div id="container44">
-					<h3>The Market District</h3>
-					<p class="last-paragraph">Grand and Philip/Hudson and Hamilton area was a mixed/commercial residential area. At its center was the farmer&apos;s market and retail/wholesale produce vendors. Landmarks: Lyon Block, First Methodist Church/Methodist Inner City Mission and French Catholic</p>
-				</div>
-
-				<div id="container45">
-					<h3>The "Gut"</h3>
-					<p class="last-paragraph">Area near the river and below S. Pearl St.  This area was both a factory/warehouse district and the location of a collection of single-room-occupancy hotels, flops, missions, and taverns. It was also where many European immigrants, and later Southern migrants, settled when they first arrived in Albany. Landmarks: the Salvation Army, the Palombi Hotel, former First Church of God in Christ (now Wilborn Temple), Burdick & Son factory.</p>
-				</div>
+			<div id="container45">
+				<h3>The "Gut"</h3>
+				<p class="last-paragraph">Area near the river and below S. Pearl St.  This area was both a factory/warehouse district and the location of a collection of single-room-occupancy hotels, flops, missions, and taverns. It was also where many European immigrants, and later Southern migrants, settled when they first arrived in Albany. Landmarks: the Salvation Army, the Palombi Hotel, former First Church of God in Christ (now Wilborn Temple), Burdick & Son factory.</p>
+			</div>
 
 
-				<p v-html="message"></p>
-			</div> <!-- end div text panel -->
-		<!-- </section> -->
+			<p v-html="message"></p>
+		</div> <!-- end div text panel -->
 
 	</div> <!-- end wrapper div -->
 
