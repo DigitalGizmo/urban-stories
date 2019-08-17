@@ -1,6 +1,7 @@
 $(function() {
 
 	TweenMax.set(".fade", {autoAlpha:0});
+	// TweenMax.set(".fade0", {autoAlpha:0});
 
 	var ctrl = new ScrollMagic.Controller();
 
@@ -28,10 +29,23 @@ $(function() {
 		let target = $(".fade").eq(i);
 		// console.log(" -- index: " + i);	
 		// console.log(" -- target: " + target.html());	
+		// console.log(" -- target class: " + target.attr('class'));	
+		// console.log(" -- target class: " + target.attr('class').split(' ')[1]);	
 
 		var tl = new TimelineMax();
-		tl.to(target, 2, {autoAlpha:1})
-			.to(targetPrev, 1, {autoAlpha:0});
+		// Base trans condition on second class
+		if (target.attr('class').split(' ')[1] == 'chap-end') {
+			tl.set(target, {autoAlpha:1})
+				.from(target, 2, {xPercent: 100})
+				.to(targetPrev, 2, {xPercent: -100}, '-=2'); 
+		} else if (target.attr('class').split(' ')[1] == 'chap-begin') {
+			tl.set(target, {autoAlpha:1})
+				.from(target, 1, {xPercent: -100})
+				.to(targetPrev, 1, {xPercent: 100});  
+		} else {
+			tl.to(target, 2, {autoAlpha:1})
+				.to(targetPrev, 1, {autoAlpha:0});			
+		}
 
 		// test dim container text	
 		// tl.to(target2, 1, {autoAlpha:0.5});
