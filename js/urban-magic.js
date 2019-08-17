@@ -2,6 +2,7 @@ $(function() {
 
 	TweenMax.set(".fade", {autoAlpha:0});
 	// TweenMax.set(".fade0", {autoAlpha:0});
+	TweenMax.set(".chapter-title", {autoAlpha:0});
 
 	var ctrl = new ScrollMagic.Controller();
 
@@ -13,7 +14,18 @@ $(function() {
 	})
 	// .setTween(tween)
 	.setPin("#imagesequence")
+	// .setPin("#chap-title")
 	.addIndicators()
+	.addTo(ctrl);
+
+	// Set pin for Chapter title?
+	var containerScene = new ScrollMagic.Scene({
+	    triggerElement: '.container0',
+	    // duration: 3500, // was 1300
+	    offset: 380 // was 320
+	})
+	// .setTween(tween)
+	.setPin("#chapter-sequence")
 	.addTo(ctrl);
 
 	// Create scenes
@@ -37,11 +49,18 @@ $(function() {
 		if (target.attr('class').split(' ')[1] == 'chap-end') {
 			tl.set(target, {autoAlpha:1})
 				.from(target, 2, {xPercent: 100})
-				.to(targetPrev, 2, {xPercent: -100}, '-=2'); 
+				.to(targetPrev, 2, {xPercent: -100}, 0)
+				.to("#chapter-sequence", 2, {xPercent: -100}, 0);
+				// .eventCallback("onComplete", setChapTitle, [1]); 
 		} else if (target.attr('class').split(' ')[1] == 'chap-begin') {
+			// $("#chap-title").html("The Plan");
 			tl.set(target, {autoAlpha:1})
-				.from(target, 1, {xPercent: -100})
-				.to(targetPrev, 1, {xPercent: 100});  
+				.from(target, 2, {xPercent: -100})
+				.to("#chapter-sequence", 2, {xPercent: 0}, 0)
+				.to(targetPrev, 2, {xPercent: 100});
+				// .eventCallback("onStart", 
+				// 	setChapTitle, 
+				// 	[target.attr('class').split(' ')[2]]);   
 		} else {
 			tl.to(target, 2, {autoAlpha:1})
 				.to(targetPrev, 1, {autoAlpha:0});			
@@ -62,8 +81,36 @@ $(function() {
 		.addTo(ctrl);
 	});
 
+	// Handle Chapter Titles
+	$(".chapter").each(function(i) {
+		var targetPrev = $(".chapter-title").eq(i-1);
+		// Fix to fade 1st caption
+		if (i == 0) {
+			targetPrev = $(".chapter1")
+		}
+		let target = $(".chapter-title").eq(i);
+
+		var tlt = new TimelineMax();
+		// tlt.to(target, .1, {autoAlpha:1})
+		// 	.to(targetPrev, .1, {autoAlpha:0});
+		tlt.to(targetPrev, .1, {autoAlpha:0})
+			.to(target, .1, {autoAlpha:1});
+		// tlt.set(target, {autoAlpha:1})
+		// 	.set(targetPrev, {autoAlpha:0});
+
+		new ScrollMagic.Scene({
+			triggerElement: this,
+			duration: 10,
+			offset: -50
+		})
+		.setTween(tlt)
+		.addIndicators()
+		.addTo(ctrl);
+	});
+
 
 });
+
 
 // imagify returns the corresponding html for image
 function imagify(slug) {
