@@ -30,7 +30,7 @@ $(function() {
 		// console.log(" -- target: " + target.html());	
 
 		var tl = new TimelineMax();
-		tl.to(target, 1, {autoAlpha:1})
+		tl.to(target, 2, {autoAlpha:1})
 			.to(targetPrev, 1, {autoAlpha:0});
 
 		// test dim container text	
@@ -38,7 +38,7 @@ $(function() {
 
 		new ScrollMagic.Scene({
 			triggerElement: this,
-			duration: 360,
+			duration: 460,
 			offset: -50
 			// triggerHook: 0.5
 			// duration: "50%",
