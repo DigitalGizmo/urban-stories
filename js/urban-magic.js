@@ -1,9 +1,19 @@
 $(function() {
 
 	// TweenMax.set(".fade", {autoAlpha:0});
-	TweenMax.set(".fade", {autoAlpha:0});
+	// TweenMax.set(".fade", {autoAlpha:0});
 	// TweenMax.set(".fade0", {autoAlpha:0});
 	TweenMax.set(".chapter-title", {autoAlpha:0});
+
+	// Shorter way? how to ref children in gsap?
+	$("#imagesequence").children().each(function(i) {
+		// Skip first image -- it's a pin, not a transition
+		if (i > 0) {
+			TweenMax.set(this, {autoAlpha:0});
+		}
+	});
+
+
 
 	var ctrl = new ScrollMagic.Controller();
 
@@ -48,7 +58,7 @@ $(function() {
 			// }
 
 			let target = $("#imagesequence").children().eq(i);
-			TweenMax.set(target, {autoAlpha:0});
+			// TweenMax.set(target, {autoAlpha:0});
 			// console.log(" -- index: " + i);	
 			// console.log(" -- target: " + target.html());	
 			// console.log(" -- target class: " + target.attr('class'));	
@@ -56,15 +66,15 @@ $(function() {
 
 			var tl = new TimelineMax();
 			// Base trans condition on second class
-			if (target.attr('class').split(' ')[1] == 'chap-end') {
-			// if (target.attr('class') == 'chap-end') {
+			// if (target.attr('class').split(' ')[1] == 'chap-end') {
+			if (target.attr('class') == 'chap-end') {
 				tl.set(target, {autoAlpha:1})
 					.from(target, 2, {xPercent: 100})
 					.to(targetPrev, 2, {xPercent: -100}, 0)
 					.to("#chapter-sequence", 2, {xPercent: -100}, 0);
 					// .eventCallback("onComplete", setChapTitle, [1]); 
-			} else if (target.attr('class').split(' ')[1] == 'chap-begin') {
-			// } else if (target.attr('class') == 'chap-begin') {
+			// } else if (target.attr('class').split(' ')[1] == 'chap-begin') {
+			} else if (target.attr('class') == 'chap-begin') {
 				// $("#chap-title").html("The Plan");
 				tl.set(target, {autoAlpha:1})
 					.from(target, 2, {xPercent: -100})
