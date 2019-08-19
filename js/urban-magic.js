@@ -19,7 +19,8 @@ $(function() {
 
 	// Set pin for Image container
 	var containerScene = new ScrollMagic.Scene({
-	    triggerElement: '.container0',
+	    // triggerElement: '.container0',
+	    triggerElement: '#container1',
 	    // duration: 3500, // was 1300
 	    offset: 380 // was 320
 	})
@@ -31,7 +32,8 @@ $(function() {
 
 	// Set pin for Chapter title?
 	var containerScene = new ScrollMagic.Scene({
-	    triggerElement: '.container0',
+	    // triggerElement: '.container0',
+	    triggerElement: '#container1',
 	    // duration: 3500, // was 1300
 	    offset: 380 // was 320
 	})
