@@ -89,9 +89,8 @@
 			</div>
 
 			<div id="imagesequence" class="image-container">
-
-				<!-- Might want the title here? -->
-				<!-- <h3 id="chap-title">Chapter title</h3> -->
+				<!-- imagesequence used by JS -->
+				<!-- fade used by JS, but hoping to factor it out -->
 				
 				<!-- first element doesn't have class fade -->
 				<div class="fade0" >
@@ -125,7 +124,7 @@
 				<div class="fade chap-end">
 		            <img src="images/chapter-end.jpg" />
 				</div>
-				<div class="fade chap-begin plan">
+				<div class="fade chap-begin">
 		            <img src="images/chapter2.jpg" />
 		            <p>Caption for 9</p>
 				</div>
@@ -150,7 +149,7 @@
 				<div class="fade chap-end">				
 		            <img src="images/chapter-end.jpg" />
 				</div>
-				<div class="fade chap-begin map">				
+				<div class="fade chap-begin">				
 		            <img src="images/map-commercial.jpg" />
 				</div>
 				<div class="fade">				
@@ -172,7 +171,9 @@
 
 		</div>
 
-		<div class="text-panel">  
+		<div class="text-panel"> 
+			<!-- text-panel used by JS -->
+			<!-- container ids for labeling, not used by JS -->
 
 			<!-- first div doesn't have class container -->
 			<div class="container0">
@@ -371,8 +372,8 @@
 			</div>
 
 
-			<p v-html="message"></p>
 		</div> <!-- end div text panel -->
+		<p v-html="message"></p>
 
 	</div> <!-- end wrapper div -->
 
