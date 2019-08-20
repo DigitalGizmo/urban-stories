@@ -2,6 +2,7 @@ $(function() {
 
 
 	TweenMax.set(".chapter-title", {autoAlpha:0});
+	TweenMax.set(".chapter1", {autoAlpha:1});
 
 	// Shorter way? how to ref children in gsap?
 	$("#image-sequence").children().each(function(i) {
@@ -56,15 +57,22 @@ $(function() {
 				// console.log()
 				tl.set(target, {autoAlpha:1})
 					.from(target, 2, {yPercent: 100})
-					.to(targetPrev, 2, {yPercent: -100}, 0)
-					.to("#chapter-sequence", 2, {yPercent: -100}, 0);
+					.to(targetPrev, 2, {yPercent: -100}, 0);
+
+					// .to("#chapter-sequence", .5, {autoAlpha: 0});
+
+					// .to("#chapter-sequence", 2, {yPercent: -100}, 0);
 					// .eventCallback("onComplete", setChapTitle, [1]); 
 			} else if (this.className == 'chapter') {
 				// $("#chap-title").html("The Plan");
 				tl.set(target, {autoAlpha:1})
 					.from(target, 2, {yPercent: 100})
-					.to("#chapter-sequence", 2, {yPercent: 0}, 0)
 					.to(targetPrev, 2, {yPercent: -100});
+
+					// .to("#chapter-sequence", .5, {autoAlpha: 1});
+
+
+					// .to("#chapter-sequence", 2, {yPercent: 0}, 0)
 					// .eventCallback("onStart", 
 					// 	setChapTitle, 
 					// 	[target.attr('class').split(' ')[2]]);   
@@ -87,22 +95,82 @@ $(function() {
 		} // end if i > 0
 	});
 
-	// Handle Chapter Titles
-	$(".chapter").each(function(i) {
-		var targetPrev = $(".chapter-title").eq(i-1);
+	// // Handle Chapter Titles
+	// $(".chapter").each(function(i) {
+	// 	var targetPrev = $(".chapter-title").eq(i-1);
+	// 	// Fix to fade 1st caption
+	// 	if (i == 0) {
+	// 		targetPrev = $(".chapter1")
+	// 	}
+	// 	let target = $(".chapter-title").eq(i);
+
+	// 	var tlt = new TimelineMax();
+	// 	// tlt.to(target, .1, {autoAlpha:1})
+	// 	// 	.to(targetPrev, .1, {autoAlpha:0});
+
+	// 	console.log(" -- i: " + i +", class: " + this.className.split(' ')[1]);
+
+
+	// 	if (this.className.split(' ')[1] == 'chap-end') {
+	// 		tlt.to(targetPrev, .1, {autoAlpha:0})
+	// 	} else if (this.className.split(' ')[1] == 'chap-begin') {
+	// 		tlt.to(target, .1, {autoAlpha:1});
+	// 	}
+	// 		// .to(target, .1, {autoAlpha:1});
+
+
+
+	// 	// tlt.set(target, {autoAlpha:1})
+	// 	// 	.set(targetPrev, {autoAlpha:0});
+
+	// 	new ScrollMagic.Scene({
+	// 		triggerElement: this,
+	// 		duration: 10,
+	// 		offset: -50
+	// 	})
+	// 	.setTween(tlt)
+	// 	.addIndicators()
+	// 	.addTo(ctrl);
+	// });
+
+	// Handle Chapter Endings
+	$(".chap-end").each(function(i) {
+		// var targetPrev = $(".chapter-title").eq(i-1);
+
+		var targetPrev = $(".chapter-title").eq(i);
+		
 		// Fix to fade 1st caption
-		if (i == 0) {
-			targetPrev = $(".chapter1")
-		}
-		let target = $(".chapter-title").eq(i);
+		// if (i == 0) {
+		// 	targetPrev = $(".chapter1")
+		// }
 
 		var tlt = new TimelineMax();
-		// tlt.to(target, .1, {autoAlpha:1})
-		// 	.to(targetPrev, .1, {autoAlpha:0});
+
+		console.log(" -- i: " + i +", class: " + this.className.split(' ')[1]);
+
 		tlt.to(targetPrev, .1, {autoAlpha:0})
-			.to(target, .1, {autoAlpha:1});
-		// tlt.set(target, {autoAlpha:1})
-		// 	.set(targetPrev, {autoAlpha:0});
+
+		new ScrollMagic.Scene({
+			triggerElement: this,
+			duration: 10,
+			offset: -50
+		})
+		.setTween(tlt)
+		.addIndicators()
+		.addTo(ctrl);
+	});
+
+
+	// Handle Chapter beginnings
+	$(".chap-begin").each(function(i) {
+		// Plus one -- because really it's the "next" chapter
+		let target = $(".chapter-title").eq(i+1);
+
+		var tlt = new TimelineMax();
+
+		console.log(" -- begin i: " + i +", class: " + this.className.split(' ')[1]);
+
+		tlt.to(target, .1, {autoAlpha:1});
 
 		new ScrollMagic.Scene({
 			triggerElement: this,
