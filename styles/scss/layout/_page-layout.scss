@@ -47,3 +47,12 @@ body {
 .image-container img.active {
     z-index:2;
 }
+
+//patterned after .image-container
+#chapter-sequence h2 {
+	position: absolute;
+	top: -60px;
+	left: 0;
+	height: 5em;
+	width: 100%;
+}

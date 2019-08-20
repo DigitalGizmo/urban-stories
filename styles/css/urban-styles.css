@@ -202,4 +202,12 @@ body {
   z-index: 2;
 }
 
+#chapter-sequence h2 {
+  position: absolute;
+  top: -60px;
+  left: 0;
+  height: 5em;
+  width: 100%;
+}
+
 /*# sourceMappingURL=urban-styles.css.map */
