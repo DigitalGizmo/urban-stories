@@ -4,7 +4,7 @@ $(function() {
 	TweenMax.set(".chapter-title", {autoAlpha:0});
 
 	// Shorter way? how to ref children in gsap?
-	$("#imagesequence").children().each(function(i) {
+	$("#image-sequence").children().each(function(i) {
 		// Skip first image -- it's a pin, not a transition
 		if (i > 0) {
 			TweenMax.set(this, {autoAlpha:0});
@@ -20,18 +20,17 @@ $(function() {
 	    // duration: 3500, // was 1300
 	    offset: 380 // was 320
 	})
-	.setPin("#imagesequence")
+	.setPin("#image-sequence")
 	.addIndicators()
 	.addTo(ctrl);
 
-	// Set pin for Chapter title?
+	// Set pin for Chapter title
 	var containerScene = new ScrollMagic.Scene({
 	    // triggerElement: '.container0',
 	    triggerElement: '#container1',
 	    // duration: 3500, // was 1300
 	    offset: 380 // was 320
 	})
-	// .setTween(tween)
 	.setPin("#chapter-sequence")
 	.addTo(ctrl);
 
@@ -43,24 +42,24 @@ $(function() {
 		// Skip first image -- it's a pin, not a transition
 		if (i > 0) {
 
-			var targetPrev = $("#imagesequence").children().eq(i-1);
-			let target = $("#imagesequence").children().eq(i);
+			var targetPrev = $("#image-sequence").children().eq(i-1);
+			let target = $("#image-sequence").children().eq(i);
 			// console.log(" -- index: " + i);	
 			// console.log(" -- target: " + target.html());	
 			// console.log(" -- target class: " + target.attr('class'));	
 			// console.log(" -- target class: " + target.attr('class').split(' ')[1]);	
 
 			var tl = new TimelineMax();
-			// Base trans condition on second class
-			// if (target.attr('class').split(' ')[1] == 'chap-end') {
-			if (target.attr('class') == 'chap-end') {
+			// Base transitin condition class name
+			// "this" is not a jQuery object, so need straight JS
+			if (this.className == 'chap-end') {
+				// console.log()
 				tl.set(target, {autoAlpha:1})
 					.from(target, 2, {yPercent: 100})
 					.to(targetPrev, 2, {yPercent: -100}, 0)
 					.to("#chapter-sequence", 2, {yPercent: -100}, 0);
 					// .eventCallback("onComplete", setChapTitle, [1]); 
-			// } else if (target.attr('class').split(' ')[1] == 'chap-begin') {
-			} else if (target.attr('class') == 'chap-begin') {
+			} else if (this.className == 'chapter') {
 				// $("#chap-title").html("The Plan");
 				tl.set(target, {autoAlpha:1})
 					.from(target, 2, {yPercent: 100})
@@ -73,9 +72,6 @@ $(function() {
 				tl.to(target, 2, {autoAlpha:1})
 					.to(targetPrev, 1, {autoAlpha:0});			
 			}
-
-			// test dim container text	
-			// tl.to(target2, 1, {autoAlpha:0.5});
 
 			new ScrollMagic.Scene({
 				triggerElement: this,
