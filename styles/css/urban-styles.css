@@ -180,6 +180,7 @@ body {
 }
 .full-width img {
   max-width: 50%;
+  /* temp solution */
 }
 
 .image-container {
