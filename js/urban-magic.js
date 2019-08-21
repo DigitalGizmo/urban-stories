@@ -19,7 +19,7 @@ $(function() {
 	    // triggerElement: '.container0',
 	    triggerElement: '#container1',
 	    // duration: 3500, // was 1300
-	    offset: 380 // was 320
+	    offset: 320 // was 320
 	})
 	.setPin("#image-sequence")
 	.addIndicators()
@@ -30,7 +30,7 @@ $(function() {
 	    // triggerElement: '.container0',
 	    triggerElement: '#container1',
 	    // duration: 3500, // was 1300
-	    offset: 380 // was 320
+	    offset: 320 // was 320
 	})
 	.setPin("#chapter-sequence")
 	.addTo(ctrl);
