@@ -19,6 +19,7 @@ $(function() {
 	    // triggerElement: '.container0',
 	    triggerElement: '#container1',
 	    // duration: 3500, // was 1300
+	    duration: $(".text-panel").height(),
 	    offset: 320 // was 320
 	})
 	// .setPin("#image-sequence")
@@ -31,6 +32,7 @@ $(function() {
 	//     // triggerElement: '.container0',
 	//     triggerElement: '#container1',
 	//     // duration: 3500, // was 1300
+	//     // duration: $(".text-panel").height(),
 	//     offset: 320 // was 320
 	// })
 	// .setPin("#chapter-sequence")
