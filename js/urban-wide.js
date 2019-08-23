@@ -27,6 +27,52 @@ $(function() {
 	.addIndicators()
 	.addTo(ctrl);
 
+	// Set pin for Image container
+	var containerScene = new ScrollMagic.Scene({
+	    // triggerElement: '.container0',
+	    triggerElement: '#wide-map',
+	    // duration: 3500, // was 1300
+	    // duration: $(".text-panel").height(),
+	    offset: 320 // was 320
+	})
+	// .setPin("#image-sequence")
+	.setPin("#map-container")
+	.addIndicators()
+	.addTo(ctrl);
+
+
+	// // Set pin for Image container
+	// var containerScene = new ScrollMagic.Scene({
+	//     // triggerElement: '.container0',
+	//     triggerElement: '#thing1',
+	//     // duration: 3500, // was 1300
+	//     // duration: $(".text-panel").height(),
+	//     offset: 320 // was 320
+	// })
+	// // .setPin("#image-sequence")
+	// // .setPin("#map-container")
+	// .setTween(tl)
+	// .addIndicators()
+	// .addTo(ctrl);
+
+
+	var mapScene = new ScrollMagic.Scene({
+	    // triggerElement: '.container0',
+	    triggerElement: '#thing1',
+	    // duration: 3500, // was 1300
+	    // duration: $(".text-panel").height(),
+	    offset: 320 // was 320
+	})
+    .on('start', function () {
+        console.log("passed trigger");
+        // setPoint();
+        	treatmap.setView([42.5, -72], 11) ;
+    })
+    .addTo(ctrl);
+
+
+
+
 	// // Set pin for Chapter title
 	// var containerScene = new ScrollMagic.Scene({
 	//     // triggerElement: '.container0',
@@ -37,6 +83,7 @@ $(function() {
 	// })
 	// .setPin("#chapter-sequence")
 	// .addTo(ctrl);
+
 
 	// Create scenes
 	// // $(".container").each(function(i) {

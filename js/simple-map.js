@@ -55,3 +55,11 @@ treatmap = L.map('mapdiv', {
 	layers: [stamen] // topobase stamen , siteMarkers hitchcock
 });
 
+function setPoint() {
+	treatmap.setView([42.5, -72], 11) 
+
+}
+
+
+
+
