@@ -22,52 +22,52 @@ $(function() {
 	    duration: $(".text-panel").height(),
 	    offset: 320 // was 320
 	})
-	// .setPin("#image-sequence")
 	.setPin(".image-panel")
 	.addIndicators()
 	.addTo(ctrl);
 
-	// Set pin for Image container
+
+	// Set pin for wide map
 	var containerScene = new ScrollMagic.Scene({
 	    // triggerElement: '.container0',
 	    triggerElement: '#wide-map',
-	    // duration: 3500, // was 1300
 	    // duration: $(".text-panel").height(),
 	    offset: 320 // was 320
 	})
-	// .setPin("#image-sequence")
 	.setPin("#map-container")
+    .on('start', function () {
+        console.log("passed trigger");
+        // setPoint defined in simpl-map.js
+        setPoint(42.6503, -73.758, 15);
+    	// treatmap.setView([42.5, -72], 11) ;
+    })
 	.addIndicators()
 	.addTo(ctrl);
 
-
-	// // Set pin for Image container
-	// var containerScene = new ScrollMagic.Scene({
-	//     // triggerElement: '.container0',
-	//     triggerElement: '#thing1',
-	//     // duration: 3500, // was 1300
-	//     // duration: $(".text-panel").height(),
-	//     offset: 320 // was 320
-	// })
-	// // .setPin("#image-sequence")
-	// // .setPin("#map-container")
-	// .setTween(tl)
-	// .addIndicators()
-	// .addTo(ctrl);
-
-
+	// First of two things
 	var mapScene = new ScrollMagic.Scene({
-	    // triggerElement: '.container0',
-	    triggerElement: '#thing1',
+	    triggerElement: '#thing1'
 	    // duration: 3500, // was 1300
 	    // duration: $(".text-panel").height(),
-	    offset: 320 // was 320
+	    // offset: 200 // was 320
 	})
     .on('start', function () {
-        console.log("passed trigger");
-        // setPoint();
-        	treatmap.setView([42.5, -72], 11) ;
+        // setPoint defined in simpl-map.js
+        setPoint(42.649912, -73.762082, 16);
     })
+	.addIndicators()
+    .addTo(ctrl);
+
+    // Second thing
+	var mapScene = new ScrollMagic.Scene({
+	    triggerElement: '#thing2'
+	    // duration: $(".text-panel").height(),
+	    offset: 200 // was 320
+	})
+    .on('start', function () {
+        setPoint(42.651189, -73.756739, 17);
+    })
+	.addIndicators()
     .addTo(ctrl);
 
 
