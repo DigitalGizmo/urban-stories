@@ -27,64 +27,6 @@ $(function() {
 	.addTo(ctrl);
 
 
-	// Set pin for wide map
-	var containerScene = new ScrollMagic.Scene({
-	    // triggerElement: '.container0',
-	    triggerElement: '#wide-map',
-	    // duration: $(".text-panel").height(),
-	    offset: 320 // was 320
-	})
-	.setPin("#map-container")
-    .on('start', function () {
-        console.log("passed trigger");
-        // setPoint defined in simpl-map.js
-        setPoint(42.6503, -73.758, 15);
-    	// treatmap.setView([42.5, -72], 11) ;
-    })
-	.addIndicators()
-	.addTo(ctrl);
-
-	// First of two things
-	var mapScene = new ScrollMagic.Scene({
-	    triggerElement: '#thing3'
-	    // duration: 3500, // was 1300
-	    // duration: $(".text-panel").height(),
-	    // offset: 200 // was 320
-	})
-    .on('start', function () {
-        // setPoint defined in simpl-map.js
-        setPoint(42.649912, -73.762082, 16);
-    })
-	.addIndicators()
-    .addTo(ctrl);
-
-    // Second thing
-	var mapScene = new ScrollMagic.Scene({
-	    triggerElement: '#thing4'
-	    // duration: $(".text-panel").height(),
-	    // offset: 200 // was 320
-	})
-    .on('start', function () {
-        setPoint(42.651189, -73.756739, 17);
-    })
-	.addIndicators()
-    .addTo(ctrl);
-
-
-
-
-	// // Set pin for Chapter title
-	// var containerScene = new ScrollMagic.Scene({
-	//     // triggerElement: '.container0',
-	//     triggerElement: '#container1',
-	//     // duration: 3500, // was 1300
-	//     // duration: $(".text-panel").height(),
-	//     offset: 320 // was 320
-	// })
-	// .setPin("#chapter-sequence")
-	// .addTo(ctrl);
-
-
 	// Create scenes
 	// // $(".container").each(function(i) {
 	// Loop through all divs in text-panel
@@ -145,43 +87,6 @@ $(function() {
 		} // end if i > 0
 	});
 
-	// // Handle Chapter Titles
-	// $(".chapter").each(function(i) {
-	// 	var targetPrev = $(".chapter-title").eq(i-1);
-	// 	// Fix to fade 1st caption
-	// 	if (i == 0) {
-	// 		targetPrev = $(".chapter1")
-	// 	}
-	// 	let target = $(".chapter-title").eq(i);
-
-	// 	var tlt = new TimelineMax();
-	// 	// tlt.to(target, .1, {autoAlpha:1})
-	// 	// 	.to(targetPrev, .1, {autoAlpha:0});
-
-	// 	console.log(" -- i: " + i +", class: " + this.className.split(' ')[1]);
-
-
-	// 	if (this.className.split(' ')[1] == 'chap-end') {
-	// 		tlt.to(targetPrev, .1, {autoAlpha:0})
-	// 	} else if (this.className.split(' ')[1] == 'chap-begin') {
-	// 		tlt.to(target, .1, {autoAlpha:1});
-	// 	}
-	// 		// .to(target, .1, {autoAlpha:1});
-
-
-
-	// 	// tlt.set(target, {autoAlpha:1})
-	// 	// 	.set(targetPrev, {autoAlpha:0});
-
-	// 	new ScrollMagic.Scene({
-	// 		triggerElement: this,
-	// 		duration: 10,
-	// 		offset: -50
-	// 	})
-	// 	.setTween(tlt)
-	// 	.addIndicators()
-	// 	.addTo(ctrl);
-	// });
 
 	// Handle Chapter Endings
 	$(".chap-end").each(function(i) {
@@ -231,6 +136,67 @@ $(function() {
 		.addIndicators()
 		.addTo(ctrl);
 	});
+
+	// --------- Map -------------
+	// Set pin for wide map
+	var containerScene = new ScrollMagic.Scene({
+	    // triggerElement: '.container0',
+	    triggerElement: '#wide-map',
+	    // duration: $(".text-panel").height(),
+	    offset: 320 // was 320
+	})
+	.setPin("#map-container")
+    .on('start', function () {
+        // console.log("passed trigger");
+        // setPoint defined in simpl-map.js
+        setPoint(42.6503, -73.758, 15, 'none');
+    	// treatmap.setView([42.5, -72], 11) ;
+    })
+	.addIndicators()
+	.addTo(ctrl);
+
+	// Add Take area before zooming
+	var mapScene = new ScrollMagic.Scene({
+	    triggerElement: '#thing3'
+	    // duration: 3500, // was 1300
+	    // duration: $(".text-panel").height(),
+	    // offset: 200 // was 320
+	})
+    .on('start', function () {
+        // setPoint defined in simpl-map.js
+        setPoint(42.6503, -73.758, 15, 'take');
+    })
+	.addIndicators()
+    .addTo(ctrl);
+
+	// Add Take area before zooming
+	var mapScene = new ScrollMagic.Scene({
+	    triggerElement: '#thing4'
+	    // duration: 3500, // was 1300
+	    // duration: $(".text-panel").height(),
+	    // offset: 200 // was 320
+	})
+    .on('start', function () {
+        // setPoint defined in simpl-map.js
+        setPoint(42.649912, -73.762082, 16, 'take');
+    })
+	.addIndicators()
+    .addTo(ctrl);
+
+    // Second thing
+	var mapScene = new ScrollMagic.Scene({
+	    triggerElement: '#thing5'
+	    // duration: $(".text-panel").height(),
+	    // offset: 200 // was 320
+	})
+    .on('start', function () {
+        setPoint(42.651189, -73.756739, 17, 'none');
+    })
+	.addIndicators()
+    .addTo(ctrl);
+
+
+
 
 
 });
