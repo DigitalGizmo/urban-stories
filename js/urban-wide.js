@@ -46,7 +46,7 @@ $(function() {
 
 	// First of two things
 	var mapScene = new ScrollMagic.Scene({
-	    triggerElement: '#thing1'
+	    triggerElement: '#thing3'
 	    // duration: 3500, // was 1300
 	    // duration: $(".text-panel").height(),
 	    // offset: 200 // was 320
@@ -60,9 +60,9 @@ $(function() {
 
     // Second thing
 	var mapScene = new ScrollMagic.Scene({
-	    triggerElement: '#thing2'
+	    triggerElement: '#thing4'
 	    // duration: $(".text-panel").height(),
-	    offset: 200 // was 320
+	    // offset: 200 // was 320
 	})
     .on('start', function () {
         setPoint(42.651189, -73.756739, 17);
