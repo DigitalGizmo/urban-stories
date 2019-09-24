@@ -11,9 +11,18 @@
 	<style type="text/css">
 		body {margin: 0; padding: 0;}
 		
-		.wrapper {
+		.pin-wrapper {
 			border: 1px solid red;
 			position: relative;
+		}
+
+		.narrative {
+			margin: 0 auto;
+			width: 70%;
+		}
+
+		.narrative p {
+			font-size: 1.5em;
 		}
 
 		.image-panel	{
@@ -30,63 +39,88 @@
 			max-width: 100%;
 		}
 
-		.text-panel	{
+		.caption-panel	{
 			width: 25%;
 			position: relative;
 			z-index: 10;
 			margin: 2em;
 		}
 
-		.text-panel	div {
+		.caption-panel div {
 			background-color: beige;
 			margin-bottom: 20em;
 			padding: 2em;
 		}
+
+		.caption-panel div.last-one {
+			margin-bottom: 1em;
+		}
+
 	</style>
 
 </head>
 
 <body>
-	<div class="wrapper">
+		<div class="narrative">
+			
+			<h1>This is a title</h1>
 
-		<div class="image-panel">
+			<p>The reaction of residents in the &ldquo;take area&rdquo; were mixed. Some welcomed the promised utopian vision, hoping it would improve their living situation. Others `were more skeptical, expressing concern about both their residential prospects as well as the effects on their business. Scroll down to read — and hear, a sampling of reactions.</p>
 
-			<div>
-				<img src="images/albany-construction.jpg"/>
-			</div>
+			<p>&ldquo;Thirty years ago this market was open day and night. The Menands Market opened. That killed this. Then Park &amp; Shop opened. That and the automobile killed the rest of the farmer trade. I&apos;m an old guy. I&apos;ll be 67 in August. I&apos;m retired practically already and my son, Frank, will be in charge.&rdquo;</p>
 
-			<!--  
-			<div>
-				<img src="images/intro-alt.jpg"/>
-			</div> 
-			-->
+		</div><!-- /narrative -->	
 
-			<!--  
-			<div>
-				<img src="images/chapter1-4.jpg"/>
-			</div>
-			-->
+		<div class="pin-wrapper">
+		
+			<div class="image-panel">
 
-		</div><!-- /image-panel -->
+				<div>
+					<img src="images/albany-construction.jpg"/>
+				</div>
+
+				<!--  
+				<div>
+					<img src="images/intro-alt.jpg"/>
+				</div> 
+				-->
+
+				<!--  
+				<div>
+					<img src="images/chapter1-4.jpg"/>
+				</div>
+				-->
+
+			</div><!-- /image-panel -->
 
 
-		<div class="text-panel">
+		<div class="caption-panel">
 
 			<div id="container1">
-				<p class="caption">Caption for 1 - Mixed Reactions, Old Albany street. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				<p>Caption for 1 - Mixed Reactions, Old Albany street. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 			</div>
 
 			<div id="container2">
-				<p class="caption">Caption for 2 - Mixed Reactions, Old Albany street. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				<p>Caption for 2 - Mixed Reactions, Old Albany street. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 			</div>
 
-			<div id="container3">
-				<p class="caption">Caption for 3 - Mixed Reactions, Old Albany street. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			<div id="container3" class="last-one">
+				<p>Caption for 3 - Mixed Reactions, Old Albany street. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 			</div>
 
 		</div><!-- /text-panel -->		
 
 	</div><!-- /wrapper -->
+
+		<div class="narrative">
+			
+			<h1>This is a title</h1>
+
+			<p>The reaction of residents in the &ldquo;take area&rdquo; were mixed. Some welcomed the promised utopian vision, hoping it would improve their living situation. Others `were more skeptical, expressing concern about both their residential prospects as well as the effects on their business. Scroll down to read — and hear, a sampling of reactions.</p>
+
+			<p>&ldquo;Thirty years ago this market was open day and night. The Menands Market opened. That killed this. Then Park &amp; Shop opened. That and the automobile killed the rest of the farmer trade. I&apos;m an old guy. I&apos;ll be 67 in August. I&apos;m retired practically already and my son, Frank, will be in charge.&rdquo;</p>
+
+		</div><!-- /narrative -->	
 
 </body>
 </html>
