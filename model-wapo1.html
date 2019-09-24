@@ -20,18 +20,23 @@
 			border: 1px solid blue;		
 		}
 
-		.image-panel img	{
-			max-width: 100%;		
+		.image-panel div 	{
+			position: absolute;
+			top: 0;
+			left: 0;
+  		}
+
+		.image-panel div img	{
+			max-width: 100%;
 		}
 
 		.text-panel	{
-			border: 1px solid yellow;
 			background-color: white;
-			position: absolute;
-			top: 200px;
-			left: 50px;
 			width: 25%;
 			padding: 1em;
+			position: relative;
+			z-index: 10;
+			margin: 2em 0 0 2em;
 		}
 	</style>
 
@@ -39,12 +44,42 @@
 
 <body>
 	<div class="wrapper">
+
 		<div class="image-panel">
-			<img src="images/albany-construction.jpg"/>
+
+			<div>
+				<img src="images/albany-construction.jpg"/>
+			</div>
+
+			<!--  
+			<div>
+				<img src="images/intro-alt.jpg"/>
+			</div> 
+			-->
+
+			<!--  
+			<div>
+				<img src="images/chapter1-4.jpg"/>
+			</div>
+			-->
+
 		</div><!-- /image-panel -->
 
+
 		<div class="text-panel">
-			<p class="caption">Caption for 1 - Mixed Reactions, Old Albany street. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+			<div id="container1">
+				<p class="caption">Caption for 1 - Mixed Reactions, Old Albany street. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			</div>
+
+			<div id="container2">
+				<p class="caption">Caption for 2 - Mixed Reactions, Old Albany street. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			</div>
+
+			<div id="container3">
+				<p class="caption">Caption for 3 - Mixed Reactions, Old Albany street. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			</div>
+
 		</div><!-- /text-panel -->		
 
 	</div><!-- /wrapper -->
