@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<title>Urban Renewal - Wapo Model</title>
+
+	<style type="text/css">
+		body {margin: 0; padding: 0;}
+		
+		.pin-wrapper {
+			border: 1px solid red;
+			position: relative;
+		}
+
+		.narrative {
+			margin: 0 auto;
+			width: 70%;
+		}
+
+		.narrative p {
+			font-size: 1.5em;
+		}
+
+		.image-panel	{
+			border: 1px solid blue;		
+		}
+
+		.image-panel div 	{
+			/*position: absolute;*/
+			position: relative;
+			top: 0;
+			left: 0;
+  		}
+
+		.image-panel div img	{
+			max-width: 100%;
+		}
+
+		.caption-panel	{
+			width: 25%;
+			position: relative;
+			z-index: 10;
+			margin: 2em;
+		}
+
+		.caption-panel div {
+			background-color: beige;
+			margin-bottom: 50em;
+			padding: 2em;
+		}
+
+		.caption-panel div.last-one {
+			margin-bottom: 1em;
+		}
+
+	</style>
+
+</head>
+
+<body>
+	<div class="narrative">
+		
+		<h1>This is a title</h1>
+
+		<p>The reaction of residents in the &ldquo;take area&rdquo; were mixed. Some welcomed the promised utopian vision, hoping it would improve their living situation. Others `were more skeptical, expressing concern about both their residential prospects as well as the effects on their business. Scroll down to read — and hear, a sampling of reactions.</p>
+
+		<p>&ldquo;Thirty years ago this market was open day and night. The Menands Market opened. That killed this. Then Park &amp; Shop opened. That and the automobile killed the rest of the farmer trade. I&apos;m an old guy. I&apos;ll be 67 in August. I&apos;m retired practically already and my son, Frank, will be in charge.&rdquo;</p>
+
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+
+	</div><!-- /narrative -->	
+
+	<div class="pin-wrapper">
+	
+		<div class="image-panel"> <!-- id="image-sequence"  -->
+
+			<div class="pinable">
+				<img src="images/albany-construction.jpg"/>
+			</div>
+
+			<!--  
+			<div>
+				<img src="images/intro-alt.jpg"/>
+			</div> 
+			-->
+
+			<!--  
+			<div>
+				<img src="images/chapter1-4.jpg"/>
+			</div>
+			-->
+
+		</div><!-- /image-panel -->
+
+
+	</div><!-- /pin-wrapper -->
+
+		<div class="caption-panel">
+
+			<div id="container1">
+				<p>Caption for 1 - Mixed Reactions, Old Albany street. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			</div>
+
+			<div id="container2">
+				<p>Caption for 2 - Mixed Reactions, Old Albany street. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			</div>
+
+			<div id="container3" class="last-one">
+				<p>Caption for 3 - Mixed Reactions, Old Albany street. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			</div>
+
+			<div id="container0">
+				<p>&nbsp;</p>
+			</div>
+
+		</div><!-- /caption-panel -->		
+
+	<div class="narrative">
+		
+		<h1>This is a title</h1>
+
+		<p>The reaction of residents in the &ldquo;take area&rdquo; were mixed. Some welcomed the promised utopian vision, hoping it would improve their living situation. Others `were more skeptical, expressing concern about both their residential prospects as well as the effects on their business. Scroll down to read — and hear, a sampling of reactions.</p>
+
+		<p>&ldquo;Thirty years ago this market was open day and night. The Menands Market opened. That killed this. Then Park &amp; Shop opened. That and the automobile killed the rest of the farmer trade. I&apos;m an old guy. I&apos;ll be 67 in August. I&apos;m retired practically already and my son, Frank, will be in charge.&rdquo;</p>
+
+	</div><!-- /narrative -->	
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
+
+	<script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+
+
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.js"></script>
+
+	<script src="js/scroll-wapo1.js" type="text/javascript"></script>
+
+</body>
+</html>
