@@ -11,9 +11,8 @@ $(function() {
 	    duration: $(".caption-panel").height(),
 	    offset: -500 // was 320
 	})
+	.setPin(".image-panel", {pushFollowers: false})
 	// .setPin(".image-panel")
-	.setPin(".pinable")
-	// .setPin("#image-sequence")
 	.addIndicators()
 	.addTo(ctrl);
 

@@ -32,6 +32,6 @@ var scene2 = new ScrollMagic.Scene({
   duration: 250 // pin the element for a total of 400px
 })
 .setPin("#pinned-element2") // the element we want to pin
-// .setTween(tween)
+.setTween(tween)
 .addIndicators()
 .addTo(controller);
