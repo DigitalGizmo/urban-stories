@@ -28,7 +28,7 @@ imageSeqElems[1].children().each(function(i) {
 });
 
 
-// --- Pin Titles ---
+// --- Pin Chapter Titles ---
 // Set pin for first chapter TITLE
 var containerScene = new ScrollMagic.Scene({
 	triggerElement: "#chapter1-title", // point of execution
@@ -48,6 +48,28 @@ var containerScene = new ScrollMagic.Scene({
 .setPin("#chapter2-title", {pushFollowers: false})
 .addIndicators()
 .addTo(ctrl);
+
+// Set pin for 3rd chapter TITLE
+var containerScene = new ScrollMagic.Scene({
+	triggerElement: "#chapter3-title", // point of execution
+	duration: $("#chapter3").height(),
+	triggerHook: 0, // don't trigger until #pinned-trigger1 hits the top of the viewport
+})
+.setPin("#chapter3-title", {pushFollowers: false})
+.addIndicators()
+.addTo(ctrl);
+
+// Set pin for 4th chapter TITLE
+var containerScene = new ScrollMagic.Scene({
+	triggerElement: "#chapter4-title", // point of execution
+	duration: $("#chapter4").height(),
+	triggerHook: 0, // don't trigger until #pinned-trigger1 hits the top of the viewport
+})
+.setPin("#chapter4-title", {pushFollowers: false})
+.addIndicators()
+.addTo(ctrl);
+
+
 
 // --- Pin Gallery images
 // Set pin for first GALLERY Image container
