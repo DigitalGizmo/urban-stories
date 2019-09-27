@@ -1,0 +1,51 @@
+.narrative {
+	margin: 0 auto;
+	width: 70%;
+}
+
+.narrative p {
+	font-size: 1.5em;
+}
+
+.image-panel	{
+	border: 1px solid blue;		
+	height: 80vh;
+	position: relative;
+}
+
+.image-panel div 	{
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin-left: 1em;
+	}
+
+.chapter-title 	{
+	background-color: #ccc;
+	height: 3em;
+	text-align: center;
+	}
+
+.image-panel div img	{
+	/*max-width: 100%;*/
+	max-width: 95%;
+}
+
+.caption-panel	{
+	width: 25%;
+	position: relative;
+	z-index: 10;
+	margin: 2em;
+}
+
+.caption-panel div {
+	background-color: beige;
+	/*margin-bottom: 50em;*/
+	margin-bottom: 90vh;
+	padding: 2em;
+	margin-top: -10em;
+}
+
+.caption-panel div.last-one {
+	margin-bottom: 20em;
+}
