@@ -159,5 +159,65 @@ $("#caption-sequence2").children().each(function(i) {
 	} // end if i > 0
 });
 
+// --------- MAP -------------
+
+// Set pin for wide map
+var containerScene = new ScrollMagic.Scene({
+    // triggerElement: '.container0',
+    triggerElement: '#image-sequence3',
+	duration: $("#caption-sequence3").height(),
+	triggerHook: 0, // don't trigger until #pinned-trigger1 hits the top of the viewport
+	offset: -50 // was 320
+})
+.setPin("#image-sequence3", {pushFollowers: false})
+.on('start', function () {
+    // console.log("passed trigger");
+    // setPoint defined in simpl-map.js
+    setPoint(42.6503, -73.758, 15, 'none');
+	// treatmap.setView([42.5, -72], 11) ;
+})
+.addIndicators()
+.addTo(ctrl);
+
+// Add Take area before zooming
+var mapScene = new ScrollMagic.Scene({
+    triggerElement: '#thing3'
+    // duration: 3500, // was 1300
+    // duration: $(".text-panel").height(),
+    // offset: 200 // was 320
+})
+.on('start', function () {
+    // setPoint defined in simpl-map.js
+    setPoint(42.6503, -73.758, 15, 'take');
+})
+.addIndicators()
+.addTo(ctrl);
+
+// Add Take area before zooming
+var mapScene = new ScrollMagic.Scene({
+    triggerElement: '#thing4'
+    // duration: 3500, // was 1300
+    // duration: $(".text-panel").height(),
+    // offset: 200 // was 320
+})
+.on('start', function () {
+    // setPoint defined in simpl-map.js
+    setPoint(42.649912, -73.762082, 16, 'take');
+})
+.addIndicators()
+.addTo(ctrl);
+
+// Second thing
+var mapScene = new ScrollMagic.Scene({
+    triggerElement: '#thing5'
+    // duration: $(".text-panel").height(),
+    // offset: 200 // was 320
+})
+.on('start', function () {
+    setPoint(42.651189, -73.756739, 17, 'none');
+})
+.addIndicators()
+.addTo(ctrl);
+
 
 

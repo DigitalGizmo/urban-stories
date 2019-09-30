@@ -8,7 +8,16 @@
 	<meta content="width=device-width, initial-scale=1.0" name="viewport">
 	<title>Albany Lost Places/Displaced People - Prototype</title>
 
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+	   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+	   crossorigin=""/>
+
 	<link rel="stylesheet" href="styles/css/scroll-story.css" type="text/css"/>
+
+	<!-- Make sure you put this AFTER Leaflet's CSS -->
+	<script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+	integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+	crossorigin=""></script>
  
 </head>
 
@@ -178,14 +187,34 @@
 			<p>South Mall planning photo, ca. 1962. Credit: Bernard Kolenberg via John Mesick.</p>
 		</div>
 
-		<div class="narrative">
-			
+		<div class="narrative">	
 			<p>Within the area slated for demolition, South Mall supporters found run-down rentals, broken sidewalks, and vacant storefronts. Critics rightly pointed to the churches, family homes, and profitable businesses in different sections of the redevelopment area. Where and why they looked determined what they saw. Within the 98 acres, there were several distinct neighborhoods.</p>
-
 		</div>
-
-
 	</section>
+
+	<!-- GUIDED MAP -->
+
+	<div id="image-sequence3" class="image-panel"> <!-- this WAS id="map-container" --> 
+		<div id="mapdiv">
+			<p>map goes here</p>
+		</div>
+		
+	</div>
+
+		<div id="caption-sequence3" class="caption-panel">
+
+			<div id="thing3">
+				<p>Adjacent to the New York State Capitol and Alfred E. Smith State Office Building, this area was a prime location for lawyers’ and lobbyists’ offices, as well as the taverns where they huddled with legislators. Elegant homes and apartment buildings also lined State and Chestnut streets.	</p>
+			</div>
+			<div id="thing4">
+				<p>This area was home to a large population of elderly single men and women. A couple of blocks from the Capitol, it also housed unmarried state workers and out-of-town legislators. Rooming houses were both business and home to the divorced or widowed women who owned most of them. Hudson Avenue shops and eateries catered to the residents of this district.</p>
+			</div>
+			<div id="thing5" class="last-one">
+				<p>The small businesses in this section were geared toward the needs of area residents—a combination of groceries, restaurants and bars, laundries, barbershops, and shoe repairer stores. Business owner, employees, and other tenants lived in apartments above the storefronts. </p>
+			</div>
+
+		</div><!-- /caption-panel -->	
+
 
 	<div id="chapter4-title" class="chapter-title">
 		<h2>Designing the South Mall</h2>
@@ -229,18 +258,16 @@
 		<div id="caption-sequence2" class="caption-panel">
 
 			<div>
-				<p>Caption for Mutin rendering 1</p>
+				<p>Architectural renderings by Marcel Mutin, 1963. Credit: NYS Archives.</p>
 			</div>
 			<div>
-				<p>Caption for Mutin rendering 2</p>
+				<p>Architectural renderings by Marcel Mutin, 1963. Credit: NYS Archives.</p>
 			</div>
 			<div class="last-one">
-				<p>[New thing: Single caption for whole gallery? No scrolling text?] Architectural renderings by Marcel Mutin, 1963. Credit: NYS Archives. </p>
+				<p>Architectural renderings by Marcel Mutin, 1963. Credit: NYS Archives. </p>
 			</div>
 
 		</div><!-- /caption-panel -->	
-
-		<p>[New thing: caption for gallery. No scrolling text?] Architectural renderings by Marcel Mutin, 1963. Credit: NYS Archives. </p>
 
 		<div class="narrative">
 			
@@ -280,6 +307,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.js"></script>
 
 	<script src="js/scroll-story.js" type="text/javascript"></script>
+	<script src="js/simple-map.js" type="text/javascript"></script>
 
 </body>
 </html>
