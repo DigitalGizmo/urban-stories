@@ -39,10 +39,11 @@ var containerScene = new ScrollMagic.Scene({
 .addIndicators()
 .addTo(ctrl);
 
-// Set pin for 2nd chapter TITLE
+// Set pin for 2nd chapter TITLE Hope or Hoax
 var containerScene = new ScrollMagic.Scene({
 	triggerElement: "#chapter2-title", // point of execution
-	duration: $("#chapter2").height(),
+	// Total HACK! Chapter 2 height isn't working
+	duration: $("#chapter1").height(),
 	triggerHook: 0, // don't trigger until #pinned-trigger1 hits the top of the viewport
 })
 .setPin("#chapter2-title", {pushFollowers: false})
@@ -73,6 +74,7 @@ var containerScene = new ScrollMagic.Scene({
 
 // --- Pin Gallery images
 // Set pin for first GALLERY Image container
+// Chapter 1 - Immediate Response
 var containerScene = new ScrollMagic.Scene({
 	triggerElement: imageSeqNames[0], // point of execution
 	duration: $("#caption-sequence1").height(),
@@ -84,6 +86,7 @@ var containerScene = new ScrollMagic.Scene({
 .addTo(ctrl);
 
 // Set pin for Image container
+// Chapter 4 - Designing South Mall
 var containerScene = new ScrollMagic.Scene({
 	triggerElement: imageSeqNames[1], // point of execution
 	duration: $("#caption-sequence2").height(),
@@ -98,6 +101,7 @@ var containerScene = new ScrollMagic.Scene({
 
 // Create scenes
 // Loop through all divs in text-panel
+// Chapter 1 Immediate Response
 $("#caption-sequence1").children().each(function(i) {
 	// Skip first image -- it's a pin, not a transition
 	if (i > 0) {
@@ -126,12 +130,12 @@ $("#caption-sequence1").children().each(function(i) {
 });
 
 
-// ----- Chapter 2 ----
 
 
 
 // Create scenes
 // Loop through all divs in text-panel
+// ----- Chapter 4 Designing South Mall ----
 $("#caption-sequence2").children().each(function(i) {
 	// Skip first image -- it's a pin, not a transition
 	if (i > 0) {
