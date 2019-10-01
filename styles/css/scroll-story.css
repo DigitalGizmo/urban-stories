@@ -27,7 +27,7 @@ h1 {
 	width: 60%;
 }
 
-.narrative p {
+.narrative p, ol li {
 	font-size: 1.5em;
 }
 
